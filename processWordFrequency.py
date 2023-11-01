@@ -1,5 +1,4 @@
 import re
-from tqdm import tqdm
 import pandas as pd
 
 
