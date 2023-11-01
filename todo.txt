@@ -1,4 +1,4 @@
-1. Word cloud for frequency
+1. Word cloud for frequency [DONE]
 2. Play around with https://simpletransformers.ai/docs/binary-classification/
 3. Bi-word frequency chart
 4. Email david locatelli to ask if there is a negative dataset within the tweet ids
