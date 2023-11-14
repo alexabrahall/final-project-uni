@@ -3,3 +3,9 @@
 3. Bi-word frequency chart [DONE]
 4. Email david locatelli to ask if there is a negative dataset within the tweet ids [DONE]
 5. Train binary model and predict using own data [DONE]
+6. Re process current dataset to put tweet on one line as multiple lines breaks the prediction
+7. Train and predict with https://huggingface.co/diptanu/fBERT
+8. Train and predict with https://huggingface.co/GroNLP/hateBERT
+9. Train and predict with https://huggingface.co/vinai/bertweet-base
+10. Train and predict with https://github.com/TharinduDR/GeneralOffense/blob/main/data/OLID/olid_falcon.py
+11. Train and predict all previous models with data from https://raw.githubusercontent.com/amandacurry/convabuse/main/1_full/ConvAbuseEMNLPfull.csv
