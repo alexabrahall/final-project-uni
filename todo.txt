@@ -1,5 +1,5 @@
 1. Word cloud for frequency [DONE]
-2. Play around with https://simpletransformers.ai/docs/binary-classification/
+2. Play around with https://simpletransformers.ai/docs/binary-classification/ [DONE]
 3. Bi-word frequency chart [DONE]
-4. Email david locatelli to ask if there is a negative dataset within the tweet ids
-5. Train binary model and predict using own data
+4. Email david locatelli to ask if there is a negative dataset within the tweet ids [DONE]
+5. Train binary model and predict using own data [DONE]
