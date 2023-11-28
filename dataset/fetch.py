@@ -48,6 +48,8 @@ async def main():
             continue
         tweet_text = tweet.rawContent
 
+        tweet_text = tweet_text.replace("\n", " ")
+
          # open the csv to write to
         csv = open("dataset.csv", "a", encoding="utf-8")
         #write to csv
@@ -55,7 +57,7 @@ async def main():
 
         csv.close()
 
-        #remove tweetid from textfile
+        # remove tweetid from textfile
         with open("en.txt", "r") as f:
                 lines = f.readlines()
         with open("en.txt", "w") as f:
