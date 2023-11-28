@@ -7,5 +7,8 @@
 7. Train and predict with https://huggingface.co/diptanu/fBERT [DONE]
 8. Train and predict with https://huggingface.co/GroNLP/hateBERT [DONE]
 9. Train and predict with https://huggingface.co/vinai/bertweet-base
-10. Train and predict with https://github.com/TharinduDR/GeneralOffense/blob/main/data/OLID/olid_falcon.py
+10. Train and predict with https://github.com/TharinduDR/GeneralOffense/blob/main/data/OLID/olid_falcon.py [DONE]
 11. Train and predict all previous models with data from https://raw.githubusercontent.com/amandacurry/convabuse/main/1_full/ConvAbuseEMNLPfull.csv
+12. Integrate https://wandb.ai/ into models
+13. Write term 1 report, talk about what experiements I did plus references to any reading materal and research
+14. Write and submit ethics form
