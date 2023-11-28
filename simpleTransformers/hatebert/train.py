@@ -54,7 +54,7 @@ transformers_logger.setLevel(logging.WARNING)
 
 # # Cell 4
 # # Optional model configuration
-model_args = ClassificationArgs(num_train_epochs=10, use_multiprocessing=False, process_count=2, use_multiprocessing_for_evaluation=False, best_model_dir="hatebert", overwrite_output_dir=True, save_best_model=True)
+model_args = ClassificationArgs(num_train_epochs=10, use_multiprocessing=False, process_count=2, use_multiprocessing_for_evaluation=False, best_model_dir="hatebert", overwrite_output_dir=True, save_best_model=True, wandb_project="Final Project",wandb_kwargs={"name": "HateBERT"})
 
 # # Cell 5
 # # Create a ClassificationModel
