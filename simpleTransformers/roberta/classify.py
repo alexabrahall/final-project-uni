@@ -21,7 +21,7 @@ model = ClassificationModel("roberta", "outputs", use_cuda=True)
 
 #predict the labels and write to csv
 
-csv = open("predictions.csv", "a", encoding="utf-8")
+csv = open("roberta_predictions2.csv", "a", encoding="utf-8")
 csv.write("Tweet,Label\n")
 
 i=0

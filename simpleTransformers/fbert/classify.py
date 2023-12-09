@@ -21,7 +21,7 @@ model = ClassificationModel("bert", "outputs", use_cuda=True)
 
 #predict the labels and write to csv
 
-csv = open("fbert_predictions.csv", "a", encoding="utf-8")
+csv = open("fbert_predictions2.csv", "a", encoding="utf-8")
 csv.write("Tweet,Label\n")
 
 i=0
