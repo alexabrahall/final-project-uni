@@ -61,7 +61,6 @@ model_args = ClassificationArgs(
     best_model_dir="outputs/bertweet_base",
     overwrite_output_dir=True,
     save_best_model=True,
-
 )
 
 # # Cell 5

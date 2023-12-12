@@ -9,6 +9,9 @@
 9. Train and predict with https://huggingface.co/vinai/bertweet-base
 10. Train and predict with https://github.com/TharinduDR/GeneralOffense/blob/main/data/OLID/olid_falcon.py [DONE]
 11. Train and predict all previous models with data from https://raw.githubusercontent.com/amandacurry/convabuse/main/1_full/ConvAbuseEMNLPfull.csv
-12. Integrate https://wandb.ai/ into models
+12. Integrate https://wandb.ai/ into models [DONE]
 13. Write term 1 report, talk about what experiements I did plus references to any reading materal and research
-14. Write and submit ethics form
+14. Write and submit ethics form [DONE]
+15. Train and predict with training and dev set. Use script to get % accuracy and store in excel table. https://github.com/TharinduDR/GeneralOffense/blob/main/util/evaluation.py
+16. Do same as above with convabuse data
+17. If time, train with eng_3_train and predict with convabuse data
