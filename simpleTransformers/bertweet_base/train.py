@@ -5,28 +5,25 @@ import logging
 from sklearn.metrics import accuracy_score, f1_score
 
 
-# get the data from the .tsv file
-train_data = pd.read_csv("olid-training-v1.0.tsv", sep="\t")
+train_data = pd.read_csv("eng_3_train.tsv", sep="\t")
 
-# remove the unnecessary columns
-train_data = train_data.drop(columns=["id", "subtask_b", "subtask_c"])
-# rename the subtask_a to an int
-train_data["subtask_a"] = train_data["subtask_a"].replace("OFF", 1)
-train_data["subtask_a"] = train_data["subtask_a"].replace("NOT", 0)
-train_data.columns = ["text", "labels"]
+train_data = train_data.drop(columns=["Unnamed: 2", "Unnamed: 3", "Unnamed: 4", "Unnamed: 5", "Unnamed: 6", "Unnamed: 7", "Unnamed: 8", "Unnamed: 9", "Unnamed: 10", "Unnamed: 11", "Unnamed: 12", "Unnamed: 13", "Unnamed: 14", "Unnamed: 15"])
 
-# remove all the @USER tags
-train_data["text"] = train_data["text"].str.replace("@USER", "")
-# remove all the URL tags
-train_data["text"] = train_data["text"].str.replace("URL", "")
-# remove all the hashtags
-train_data["text"] = train_data["text"].str.replace("#", "")
+
+
+
+
+train_data.columns = ["labels", "text"]
+
+train_data["labels"] = train_data["labels"].replace("Homophobic", 1)
+train_data["labels"] = train_data["labels"].replace("Non-anti-LGBT+ content", 0)
+train_data["labels"] = train_data["labels"].replace("Transphobic", 1)
+
+#swap columns
+train_data = train_data[["text", "labels"]]
 
 # split the data into train and eval
-train_df = train_data[:10000]
-eval_df = train_data[10000:]
-
-print(train_df.head())
+train_df = train_data
 
 
 logging.basicConfig(level=logging.INFO)
@@ -54,27 +51,28 @@ transformers_logger.setLevel(logging.WARNING)
 # # Cell 4
 # # Optional model configuration
 model_args = ClassificationArgs(
-    num_train_epochs=25,
+    num_train_epochs=10,
     use_multiprocessing=False,
     process_count=2,
     use_multiprocessing_for_evaluation=False,
     best_model_dir="outputs/bertweet_base",
     overwrite_output_dir=True,
     save_best_model=True,
+    wandb_project="Final Project",
+    wandb_kwargs={"name": "BERTweet"},
 )
 
 # # Cell 5
 # # Create a ClassificationModel
-model = ClassificationModel("roberta", "vinai/bertweet-base", args=model_args)
+model = ClassificationModel("auto", "vinai/bertweet-base", args=model_args)
 
 # Cell 6
 # Train the model
 model.train_model(train_df, acc=accuracy_score)
 
-# Cell 7
-# Evaluate the model
-result, model_outputs, wrong_predictions = model.eval_model(eval_df)
-print(result)
+
+
+
 
 # Cell 8
 # Make predictions with the model
