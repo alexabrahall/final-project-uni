@@ -15,3 +15,6 @@
 15. Train and predict with training and dev set. Use script to get % accuracy and store in excel table. https://github.com/TharinduDR/GeneralOffense/blob/main/util/evaluation.py [DONE]
 16. Do same as above with convabuse data [DONE]
 17. If time, train with eng_3_train and predict with convabuse data
+18. Do other way around ^^
+19. Make graphs from excel datasheet
+20. Predict with dataset and append at 90% confident results to convabuse and HTMD datasets
