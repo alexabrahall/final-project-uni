@@ -6,7 +6,7 @@
 6. Re process current dataset to put tweet on one line as multiple lines breaks the prediction [DONE]
 7. Train and predict with https://huggingface.co/diptanu/fBERT [DONE]
 8. Train and predict with https://huggingface.co/GroNLP/hateBERT [DONE]
-9. Train and predict with https://huggingface.co/vinai/bertweet-base
+9. Train and predict with https://huggingface.co/vinai/bertweet-base [DONE]
 10. Train and predict with https://github.com/TharinduDR/GeneralOffense/blob/main/data/OLID/olid_falcon.py [DONE]
 11. Train and predict all previous models with data from https://raw.githubusercontent.com/amandacurry/convabuse/main/1_full/ConvAbuseEMNLPfull.csv
 12. Integrate https://wandb.ai/ into models [DONE]
@@ -14,7 +14,7 @@
 14. Write and submit ethics form [DONE]
 15. Train and predict with training and dev set. Use script to get % accuracy and store in excel table. https://github.com/TharinduDR/GeneralOffense/blob/main/util/evaluation.py [DONE]
 16. Do same as above with convabuse data [DONE]
-17. If time, train with eng_3_train and predict with convabuse data
-18. Do other way around ^^
-19. Make graphs from excel datasheet
+17. If time, train with eng_3_train and predict with convabuse data [DONE]
+18. Do other way around ^^ [DONE]
+19. Make graphs from excel datasheet [DONE]
 20. Predict with dataset and append at 90% confident results to convabuse and HTMD datasets
