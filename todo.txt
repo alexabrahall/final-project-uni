@@ -18,6 +18,8 @@
 18. Do other way around ^^ [DONE]
 19. Make graphs from excel datasheet [DONE]
 20. Predict with dataset and append at 90% confident results to convabuse and HTMD datasets [DONE]
-21. Use falcon, llama 2 and mistral to predict on convabuse and HTMD datasets [DONE]
+21. Use falcon, llama 2 and mistral to predict on convabuse and HTMD datasets [DONE] (https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2)
 22. Redo ethics report mentioning the new datasets
 23. Add the predicted labels to the datasets and redo all the accuracy testing and graphs [DONE]
+24. Redo the accuracy testing with original testsets 
+25. Redo LLM testing with no prompt, 3 examples, and 5 examples
