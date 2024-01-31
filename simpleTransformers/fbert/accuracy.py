@@ -8,7 +8,8 @@ def macro_f1(y_true, y_pred):
 
 
 
-train_data = pd.read_csv("eng_3_dev.tsv", encoding="utf-8", sep="\t")
+
+train_data = pd.read_csv("eng_3_dev2.tsv", encoding="utf-8", sep="\t")
 
 train_data = train_data.drop(columns=["Unnamed: 2", "Unnamed: 3", "Unnamed: 4", "Unnamed: 5", "Unnamed: 6", "Unnamed: 7", "Unnamed: 8", "Unnamed: 9"])
 
@@ -23,7 +24,7 @@ train_data = train_data[["text", "labels"]]
 
 # split the data into train and eval
 eval_df = train_data
-
+train_df= train_data
 
 print(train_data.head())
 
