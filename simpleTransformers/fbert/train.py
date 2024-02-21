@@ -5,22 +5,23 @@ import logging
 from sklearn.metrics import accuracy_score,f1_score
 
 
-train_data = pd.read_csv("eng_3_dev2.tsv", encoding="utf-8", sep="\t")
+train_data = pd.read_csv("convabuse.csv", sep=",", encoding="utf-8")
 
-train_data = train_data.drop(columns=["Unnamed: 2", "Unnamed: 3", "Unnamed: 4", "Unnamed: 5", "Unnamed: 6", "Unnamed: 7", "Unnamed: 8", "Unnamed: 9"])
 
-train_data.columns = ["labels", "text"]
+# remove the unnecessary columns
+train_data = train_data.drop(columns=["example_no", "annotator_id", "conv_id", "prev_agent", "prev_user", "agent", "bot", "is_abuse.1","is_abuse.0","is_abuse.-1", "is_abuse.-2", "is_abuse.-3","type.ableism", "type.intellectual","type.sexist", "type.sex_harassment","target.generalised", "target.individual", "target.system", "direction.explicit", "direction.implicit", "type.racist"])
 
-train_data["labels"] = train_data["labels"].replace("Homophobic", 1)
-train_data["labels"] = train_data["labels"].replace("Non-anti-LGBT+ content", 0)
-train_data["labels"] = train_data["labels"].replace("Transphobic", 1)
+for index, row in train_data.iterrows():
+    if row["type.transphobic"] == 1:
+        train_data.at[index, "type.homophobic"] = 1
+   
 
-#swap columns
-train_data = train_data[["text", "labels"]]
-
-# split the data into train and eval
+# rename the columns
+train_data = train_data.drop(columns=["type.transphobic"])
+train_data.columns = ["text", "labels"]
+#split the data into train and eval
+train_df = train_data
 eval_df = train_data
-train_df= train_data
 
 
 
