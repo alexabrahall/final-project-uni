@@ -22,4 +22,6 @@
 22. Redo ethics report mentioning the new datasets
 23. Add the predicted labels to the datasets and redo all the accuracy testing and graphs [DONE]
 24. Redo the accuracy testing with original testsets [DONE]
-25. Redo LLM testing with no prompt, 3 examples, and 5 examples
+25. Redo LLM testing with no prompt, 3 examples, and 5 examples[DONE]
+26. Upload all SS trained models to huggingface
+27. Create UI with streamlit to allow for easy testing of models
